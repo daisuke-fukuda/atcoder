@@ -19,10 +19,12 @@ function flush() {
 // }
 // flush();
 
+// 行ごとに分割する
+const inputArray = inputs.split("\n");
 
 
 // 項目ごとに分割する
-const inputArray = inputs.split(/\s/);
+// const inputArray = inputs.split(/\s/);
 
 
 // 配列から取り出す
