@@ -41,3 +41,9 @@ function next() {
 const str = "100";
 const a = parseInt(str);    // 小数点以下は失われる
 const b = parseFloat(str);  // 小数点以下を保持
+
+
+// ■2進数N桁目の値を取得する
+function getNthBit(target: number, n: number): number {
+  return (target >> (n-1)) & 1
+}
