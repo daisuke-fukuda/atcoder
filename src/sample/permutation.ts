@@ -2,7 +2,6 @@ import * as fs from "fs";
 import { maxHeaderSize } from "node:http";
 
 const array = [0, 1, 2, 3]
-
 const generatePermutation = function<V>(result: V[][], pre: V[], post: V[], depth: number, maxDepth: number) {
   // console.log(pre, post, depth)
 
