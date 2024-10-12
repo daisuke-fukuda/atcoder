@@ -51,7 +51,8 @@ function getNthBit(target: number, n: number): number {
 
 // 順列
 const array = [0, 1, 2, 3]
-const generatePermutation = function<V>(result: V[][], pre: V[], post: V[], depth: number, maxDepth: number) {
+
+function generatePermutation<V>(result: V[][], pre: V[], post: V[], depth: number, maxDepth: number) {
   // console.log(pre, post, depth)
 
   // 末尾まで行った
@@ -73,7 +74,9 @@ const generatePermutation = function<V>(result: V[][], pre: V[], post: V[], dept
   }
   return result;
 };
-
+function generatePermutationAll<V>(array: V[]) {
+  return generatePermutation([], [], array, 0, array.length)
+}
 // 全部
 // const result = generatePermutation([], [], array, 0, array.length)
 // console.log(result)

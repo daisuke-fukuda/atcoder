@@ -30,7 +30,7 @@ max(sum(グループA), sum（グループB)) が結果となる。
 let result = -1
 let sum = 0;
 // nが3の時、000〜111のループ
-for (let i = 0; i < (2 ** countBusho) - 1; i++) {
+for (let i = 0; i <= (2 ** countBusho) - 1; i++) {
   let aCount = 0;
   let bCount = 0;
 
