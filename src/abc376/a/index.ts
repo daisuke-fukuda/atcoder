@@ -7,13 +7,14 @@ const C= +NC[1]
 const target = input[1].split(" ")
 let result = 0;
 let before :number = -1;
-for (let i = 0; i < target.length; i++) {
-  const num = +target[i]
 
-  if (before == -1 ) {
-    result++
-    before = num;
-  } else if (num - before >= C) {
+// 初回
+result++
+before = +target[0];
+
+for (let i = 1; i < target.length; i++) {
+  const num = +target[i]
+  if (num - before >= C) {
     result++
     before = num;
   }
