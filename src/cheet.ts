@@ -86,4 +86,5 @@ function generatePermutationAll<V>(array: V[]) {
 // console.log(result2)
 
 
-
+// 数字の昇順でsort
+const AArray = inputs[1].split(" ").map(x => +x).sort((a: number, b: number) => +a > + b ? 1: -1)
