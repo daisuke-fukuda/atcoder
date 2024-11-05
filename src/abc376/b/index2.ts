@@ -1,5 +1,16 @@
 import * as fs from "fs";
 const input = fs.readFileSync("/dev/stdin", "utf8").trim().split("\n");
+
+// const input =
+// `
+// 6 3
+// R 4
+// L 5
+// R 6
+// `.trim().split("\n");
+
+
+
 const rowOne = input[0].split(" ")
 const N = +rowOne[0]
 const Q = +rowOne[1]
