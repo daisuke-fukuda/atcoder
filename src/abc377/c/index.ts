@@ -2,12 +2,12 @@ import * as fs from "fs";
 const input = fs.readFileSync("/dev/stdin", "utf8").trim().split("\n");
 
 const oneRow = input[0].split(" ")
-const M = BigInt(oneRow[0])
-const N = BigInt(oneRow[1])
+const N = BigInt(oneRow[0])
+const M = BigInt(oneRow[1])
 
 
 // マス目の数
-const allCount = M * M
+const allCount = N * N
 
 // [i,j]がkey
 let reserved = new Set<string>()
@@ -17,7 +17,7 @@ function setReserve(i: number, j: number) {
     // console.log(i, j, "0未満")
     return;
   }
-  if (i >= M || j >= M) {
+  if (i >= N || j >= N) {
     // console.log(i, j, "M以上")
     return
   }
@@ -26,7 +26,7 @@ function setReserve(i: number, j: number) {
 }
 
 
-for (let i = 1; i <= N; i++) {
+for (let i = 1; i <= M; i++) {
   const row = input[i].split(" ")
   const a = +row[0] -1
   const b = +row[1] -1
